@@ -61,27 +61,9 @@
 | 10 | | Uses automap_base() and reflects the database schema
 | 11 | | Correctly saves references to the tables in the sqlite file (measurement and station)
 | 12 | | Correctly creates and binds the session between the python app and database
-| 13 | | 
-| 14 | | 
-| 15 | | 
-| 16 | | 
-| 17 | | 
-| 18 | | 
-| 19 | | 
-| 20 | | 
-
-Precipitation route
-✓ Returns the jsonified
-precipitation data for the last
-year in the database
-✓ Returns json with the date as
-the key and the value as the
-precipitation
-Stations route
-✓ Returns jsonified data of all
-of the stations in the database
-Tobs route
-✓ Returns jsonified data for the
-most active station
-(USC00519281) for the last
-year of data
+| 13 | | **Precipitation API**: Returns the **jsonified** precipitation data for the last year in the database
+| 14 | | Returns json with the **date as the key** and the **value as the precipitation**
+| 15 | | **Stations**: Returns jsonified data of all of the stations in the database
+| 16 | | **Tobs route**: Returns jsonified data for the most active station (USC00519281) for the last year of data
+| 17 | | **Dates routes - Start only**: Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
+| 18 | | **Dates routes - both**: Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)

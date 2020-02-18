@@ -47,23 +47,56 @@
 | 11 | | **Route "/api/v1.0/(start)/(end)"** - "When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date **inclusive**."
 
 ### From the grading rubric pdf:
+
+#### Precipitation Analysis
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 1 | | **Precipitation** - Gets the correct results for the last year of data (the last day in the dataset is 8/23/2017)
+| 1 | | Gets the correct results for the last year of data (the last day in the dataset is 8/23/2017)
 | 2 | | Creates a pandas dataframe using the date and precipitation columns
 | 3 | | Sorts the dataframe by date
 | 4 | | Makes a plot using pandas with date as the x and precipitation as the y variables
-| 5 | | **Station** - Correctly outputs the number of stations in the dataset (9)
-| 6 | | Correctly finds the most active station by using count (USC00519281)
-| 7 | | Gets the min, max, and average temperatures for the most active station (USC00519281)
-| 8 | | Correctly plots a histogram for the last year of data using tobs as the column to count.
-| 9 | | **Flask API** - Correctly generates the engine to the correct sqlite file 
-| 10 | | Uses automap_base() and reflects the database schema
-| 11 | | Correctly saves references to the tables in the sqlite file (measurement and station)
-| 12 | | Correctly creates and binds the session between the python app and database
-| 13 | | **Precipitation API**: Returns the **jsonified** precipitation data for the last year in the database
-| 14 | | Returns json with the **date as the key** and the **value as the precipitation**
-| 15 | | **Stations**: Returns jsonified data of all of the stations in the database
-| 16 | | **Tobs route**: Returns jsonified data for the most active station (USC00519281) for the last year of data
-| 17 | | **Dates routes - Start only**: Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
-| 18 | | **Dates routes - both**: Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
+
+#### Station Analysis
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
+| 01 | | Correctly outputs the number of stations in the dataset (9)
+| 02 | | Correctly finds the most active station by using count (USC00519281)
+| 03 | | Gets the min, max, and average temperatures for the most active station (USC00519281)
+| 04 | | Correctly plots a histogram for the last year of data using tobs as the column to count.
+
+#### API SQLite Connection & Landing Page 
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
+| 01 | | Correctly generates the engine to the correct sqlite file 
+| 02 | | Uses automap_base() and reflects the database schema
+| 03 | | Correctly saves references to the tables in the sqlite file (measurement and station)
+| 04 | | Correctly creates and binds the session between the python app and database
+
+#### API Static Routes
+##### Precipitation route
+| 01 | | Returns the **jsonified** precipitation data for the last year in the database
+| 02 | | Returns json with the **date as the key** and the **value as the precipitation**
+
+##### Stations route
+| 01 | | Returns jsonified data of all of the stations in the database
+
+##### Tobs route
+| 01 | | Returns jsonified data for the most active station (USC00519281) for the last year of data
+
+#### API Dynamic Routes
+##### Start Date only route
+| 01 | | Route accepts the start date as a parameter from the URL
+| 02 | | Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
+ 
+##### Start Date and End Date route
+| 01 | | Route accepts the start and end dates as parameters from the URL
+| 02 | | Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
+
+#### Bonus
+##### Trip Temperature Analysis
+| 01 | | Uses the calc_temps function to get the min, max, and average temperatures for a date range of their choosing
+| 02 | | Uses the calculated temperatures to generate a bar chart with an error bar.
+
+##### Daily Rainfall Average
+| 01 | | Calculates the min, max, and average temperatures for each day of their trip and appends them to a list.
+| 02 | | Creates a dataframe from the list and generates a stacked line chart plotting the min, max, and average temps for each day of their trip

@@ -2,8 +2,8 @@
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
 | 1 | √ | Create a new repository for this project called `sqlalchemy-challenge`
-| 2 | | Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
-| 3 | | Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. 
+| 2 | √ | Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
+| 3 | √ | Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. 
 | 4 | | Analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 | 5 | | Choose a start date and end date for your trip. Make sure that your vacation range is approximately **3-15 days total**
 
@@ -14,16 +14,16 @@
 ### Development Requirements - Step 1: Climate Analysis and Exploration
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 1 | | Use SQLAlchemy `create_engine` to connect to your sqlite database.
-| 2 | | Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
-| 3 | | **Precipitation Data**: Design a query to retrieve the last 12 months of precipitation data.
-| 4 | | Precipitation Data: Select only the `date` and `prcp` values.
-| 5 | | Precipitation Data: Load the query results into a Pandas DataFrame and set the index to the date column.
-| 6 | | Precipitation Data: Sort the DataFrame values by `date`.
-| 7 | | Precipitation Data: Plot the results using the DataFrame `plot` method.
-| 8 | | Precipitation Data: Use Pandas to print the summary statistics for the precipitation data.
-| 11 | | **Station Analysis**: Design a query to calculate the total number of stations.
-| 12 | | Station Analysis: Design a query to find the most active stations.
+| 01 | √ | Use SQLAlchemy `create_engine` to connect to your sqlite database.
+| 02 | √ | Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+| 03 | | **Precipitation Data**: Design a query to retrieve the last 12 months of precipitation data.
+| 04 | | Precipitation Data: Select only the `date` and `prcp` values.
+| 05 | | Precipitation Data: Load the query results into a Pandas DataFrame and set the index to the date column.
+| 06 | | Precipitation Data: Sort the DataFrame values by `date`.
+| 07 | | Precipitation Data: Plot the results using the DataFrame `plot` method.
+| 08 | | Precipitation Data: Use Pandas to print the summary statistics for the precipitation data.
+| 09 | | **Station Analysis**: Design a query to calculate the total number of stations.
+| 10 | | Station Analysis: Design a query to find the most active stations.
 | 13 | | Station Analysis: List the stations and observation counts in descending order.
 | 14 | | Station Analysis: Which station has the highest number of observations?
 | 15 | | Station Analysis: **Hint**: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
@@ -47,23 +47,56 @@
 | 11 | | **Route "/api/v1.0/(start)/(end)"** - "When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date **inclusive**."
 
 ### From the grading rubric pdf:
+#### Precipitation Analysis
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 1 | | **Precipitation** - Gets the correct results for the last year of data (the last day in the dataset is 8/23/2017)
+| 1 | | Gets the correct results for the last year of data (the last day in the dataset is 8/23/2017)
 | 2 | | Creates a pandas dataframe using the date and precipitation columns
 | 3 | | Sorts the dataframe by date
 | 4 | | Makes a plot using pandas with date as the x and precipitation as the y variables
-| 5 | | **Station** - Correctly outputs the number of stations in the dataset (9)
-| 6 | | Correctly finds the most active station by using count (USC00519281)
-| 7 | | Gets the min, max, and average temperatures for the most active station (USC00519281)
-| 8 | | Correctly plots a histogram for the last year of data using tobs as the column to count.
-| 9 | | **Flask API** - Correctly generates the engine to the correct sqlite file 
-| 10 | | Uses automap_base() and reflects the database schema
-| 11 | | Correctly saves references to the tables in the sqlite file (measurement and station)
-| 12 | | Correctly creates and binds the session between the python app and database
-| 13 | | **Precipitation API**: Returns the **jsonified** precipitation data for the last year in the database
-| 14 | | Returns json with the **date as the key** and the **value as the precipitation**
-| 15 | | **Stations**: Returns jsonified data of all of the stations in the database
-| 16 | | **Tobs route**: Returns jsonified data for the most active station (USC00519281) for the last year of data
-| 17 | | **Dates routes - Start only**: Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
-| 18 | | **Dates routes - both**: Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
+
+#### Station Analysis
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
+| 01 | | Correctly outputs the number of stations in the dataset (9)
+| 02 | | Correctly finds the most active station by using count (USC00519281)
+| 03 | | Gets the min, max, and average temperatures for the most active station (USC00519281)
+| 04 | | Correctly plots a histogram for the last year of data using tobs as the column to count.
+
+#### API SQLite Connection & Landing Page 
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
+| 01 | | Correctly generates the engine to the correct sqlite file 
+| 02 | | Uses automap_base() and reflects the database schema
+| 03 | | Correctly saves references to the tables in the sqlite file (measurement and station)
+| 04 | | Correctly creates and binds the session between the python app and database
+
+#### API Static Routes
+##### Precipitation route
+| 01 | | Returns the **jsonified** precipitation data for the last year in the database
+| 02 | | Returns json with the **date as the key** and the **value as the precipitation**
+
+##### Stations route
+| 01 | | Returns jsonified data of all of the stations in the database
+
+##### Tobs route
+| 01 | | Returns jsonified data for the most active station (USC00519281) for the last year of data
+
+#### API Dynamic Routes
+##### Start Date only route
+| 01 | | Route accepts the start date as a parameter from the URL
+| 02 | | Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
+ 
+##### Start Date and End Date route
+| 01 | | Route accepts the start and end dates as parameters from the URL
+| 02 | | Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
+
+#### Bonus
+##### Trip Temperature Analysis
+| 01 | | Uses the calc_temps function to get the min, max, and average temperatures for a date range of their choosing
+| 02 | | Uses the calculated temperatures to generate a bar chart with an error bar.
+
+##### Daily Rainfall Average
+| 01 | | Calculates the min, max, and average temperatures for each day of their trip and appends them to a list.
+| 02 | | Creates a dataframe from the list and generates a stacked line chart plotting the min, max, and average temps for each day of their trip
+

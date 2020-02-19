@@ -16,20 +16,17 @@
 | :---: | :---: | :--- 
 | 01 | √ | Use SQLAlchemy `create_engine` to connect to your sqlite database.
 | 02 | √ | Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
-| 03 | | **Precipitation Data**: Design a query to retrieve the last 12 months of precipitation data.
-| 04 | | Precipitation Data: Select only the `date` and `prcp` values.
-| 05 | | Precipitation Data: Load the query results into a Pandas DataFrame and set the index to the date column.
-| 06 | | Precipitation Data: Sort the DataFrame values by `date`.
-| 07 | | Precipitation Data: Plot the results using the DataFrame `plot` method.
-| 08 | | Precipitation Data: Use Pandas to print the summary statistics for the precipitation data.
-| 09 | | **Station Analysis**: Design a query to calculate the total number of stations.
-| 10 | | Station Analysis: Design a query to find the most active stations.
-| 13 | | Station Analysis: List the stations and observation counts in descending order.
-| 14 | | Station Analysis: Which station has the highest number of observations?
-| 15 | | Station Analysis: **Hint**: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
-| 16 | | Station Analysis: Design a query to retrieve the last 12 months of temperature observation data (tobs).
-| 17 | | Station Analysis: Filter by the station with the highest number of observations.
-| 18 | | Station Analysis: Plot the results as a histogram with `bins=12`.
+| 03 | √ | **Precipitation Data**: Design a query to retrieve the last 12 months of precipitation data.
+| 04 | √ | Precipitation Data: Select only the `date` and `prcp` values.
+| 05 | √ | Precipitation Data: Load the query results into a Pandas DataFrame and set the index to the date column.
+| 06 | √ | Precipitation Data: Sort the DataFrame values by `date`.
+| 07 | √ | Precipitation Data: Plot the results using the DataFrame `plot` method.
+| 08 | √ | Precipitation Data: Use Pandas to print the summary statistics for the precipitation data.
+| 09 | √ | **Station Analysis**: Design a query to calculate the total number of stations.
+| 10 | √ | List the stations and observation counts in descending order.
+| 11 | √ | Station Analysis: Which station has the highest number of observations?
+| 12 | √ | Station Analysis: Get the last 12 months of temperature observation data (tobs) for the most active station
+| 13 |  | Station Analysis: Plot the results as a histogram with `bins=12`
 
 ### Development Requirements - Step 2: Climate App
 | Step | √ | Requirement |

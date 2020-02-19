@@ -2,8 +2,8 @@
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
 | 1 | √ | Create a new repository for this project called `sqlalchemy-challenge`
-| 2 | | Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
-| 3 | | Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. 
+| 2 | √ | Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
+| 3 | √ | Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. 
 | 4 | | Analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 | 5 | | Choose a start date and end date for your trip. Make sure that your vacation range is approximately **3-15 days total**
 
@@ -14,22 +14,19 @@
 ### Development Requirements - Step 1: Climate Analysis and Exploration
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 1 | | Use SQLAlchemy `create_engine` to connect to your sqlite database.
-| 2 | | Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
-| 3 | | **Precipitation Data**: Design a query to retrieve the last 12 months of precipitation data.
-| 4 | | Precipitation Data: Select only the `date` and `prcp` values.
-| 5 | | Precipitation Data: Load the query results into a Pandas DataFrame and set the index to the date column.
-| 6 | | Precipitation Data: Sort the DataFrame values by `date`.
-| 7 | | Precipitation Data: Plot the results using the DataFrame `plot` method.
-| 8 | | Precipitation Data: Use Pandas to print the summary statistics for the precipitation data.
-| 11 | | **Station Analysis**: Design a query to calculate the total number of stations.
-| 12 | | Station Analysis: Design a query to find the most active stations.
-| 13 | | Station Analysis: List the stations and observation counts in descending order.
-| 14 | | Station Analysis: Which station has the highest number of observations?
-| 15 | | Station Analysis: **Hint**: You may need to use functions such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
-| 16 | | Station Analysis: Design a query to retrieve the last 12 months of temperature observation data (tobs).
-| 17 | | Station Analysis: Filter by the station with the highest number of observations.
-| 18 | | Station Analysis: Plot the results as a histogram with `bins=12`.
+| 01 | √ | Use SQLAlchemy `create_engine` to connect to your sqlite database.
+| 02 | √ | Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
+| 03 | √ | **Precipitation Data**: Design a query to retrieve the last 12 months of precipitation data.
+| 04 | √ | Precipitation Data: Select only the `date` and `prcp` values.
+| 05 | √ | Precipitation Data: Load the query results into a Pandas DataFrame and set the index to the date column.
+| 06 | √ | Precipitation Data: Sort the DataFrame values by `date`.
+| 07 | √ | Precipitation Data: Plot the results using the DataFrame `plot` method.
+| 08 | √ | Precipitation Data: Use Pandas to print the summary statistics for the precipitation data.
+| 09 | √ | **Station Analysis**: Design a query to calculate the total number of stations.
+| 10 | √ | List the stations and observation counts in descending order.
+| 11 | √ | Station Analysis: Which station has the highest number of observations?
+| 12 | √ | Station Analysis: Get the last 12 months of temperature observation data (tobs) for the most active station
+| 13 |  | Station Analysis: Plot the results as a histogram with `bins=12`
 
 ### Development Requirements - Step 2: Climate App
 | Step | √ | Requirement |
@@ -47,7 +44,6 @@
 | 11 | | **Route "/api/v1.0/(start)/(end)"** - "When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date **inclusive**."
 
 ### From the grading rubric pdf:
-
 #### Precipitation Analysis
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
@@ -100,3 +96,4 @@
 ##### Daily Rainfall Average
 | 01 | | Calculates the min, max, and average temperatures for each day of their trip and appends them to a list.
 | 02 | | Creates a dataframe from the list and generates a stacked line chart plotting the min, max, and average temps for each day of their trip
+

@@ -26,8 +26,7 @@
 | 10 | √ | List the stations and observation counts in descending order.
 | 11 | √ | Station Analysis: Which station has the highest number of observations?
 | 12 | √ | Station Analysis: Get the last 12 months of temperature observation data (tobs) for the most active station
-| 13 | √ | Gets the min, max, and average temps for the most active station
-| 14 | √ | Station Analysis: Plot the results as a histogram with `bins=12`
+| 13 |  | Station Analysis: Plot the results as a histogram with `bins=12`
 
 ### Development Requirements - Step 2: Climate App using Flask API
 | Step | √ | Requirement |

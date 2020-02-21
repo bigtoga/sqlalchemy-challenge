@@ -89,7 +89,7 @@
 
 #### Bonus
 ##### Trip Temperature Analysis
-| 01 | | Uses the calc_temps function to get the min, max, and average temperatures for a date range of their choosing
+| 01 | √ | Uses the calc_temps function to get the min, max, and average temperatures for a date range of their choosing
 | 02 | | Uses the calculated temperatures to generate a bar chart with an error bar.
 
 ##### Daily Rainfall Average

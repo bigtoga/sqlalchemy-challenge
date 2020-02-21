@@ -26,22 +26,21 @@
 | 10 | √ | List the stations and observation counts in descending order.
 | 11 | √ | Station Analysis: Which station has the highest number of observations?
 | 12 | √ | Station Analysis: Get the last 12 months of temperature observation data (tobs) for the most active station
-| 13 |  | Station Analysis: Plot the results as a histogram with `bins=12`
+| 13 | √ | Gets the min, max, and average temps for the most active station
+| 14 | √ | Station Analysis: Plot the results as a histogram with `bins=12`
 
-### Development Requirements - Step 2: Climate App
+### Development Requirements - Step 2: Climate App using Flask API
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 1 | | Design a Flask API based on the queries that you have just developed.
-| 2 | | Define the routes
-| 3 | | **Route "\"** - home page
-| 4 | | List all routes available
-| 5 | | **Route "/api/v1.0/precipitation"** - Convert the query results to a Dictionary using **date** as the key and **prcp** as the value.
-| 6 | | Return the JSON representation of your dictionary.
-| 7 | | **Route "/api/v1.0/stations"** - Return a JSON list of stations from the dataset.
-| 8 | | **Route "/api/v1.0/tobs"** - query for the dates and temperature observations from a year from the last data point.
-| 9 | | Return a JSON list of Temperature Observations (tobs) for the previous year.
-| 10 | | **Route "/api/v1.0/(start)"** - Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start without an end. "When given the start only, calculate TMIN, TAVG, and TMAX for **all dates greater than and equal to the start date**."
-| 11 | | **Route "/api/v1.0/(start)/(end)"** - "When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date **inclusive**."
+| 1 | √ | **Route "\"** - home page
+| 2 | √ | List all routes available
+| 3 | √ | **Route "/api/v1.0/precipitation"** - Convert the query results to a Dictionary using **date** as the key and **prcp** as the value.
+| 4 | √ | Return the JSON representation of your dictionary.
+| 5 | √ | **Route "/api/v1.0/stations"** - Return a JSON list of stations from the dataset.
+| 6 | √ | **Route "/api/v1.0/tobs"** - query for the dates and temperature observations from a year from the last data point.
+| 7 | √ | Return a JSON list of Temperature Observations (tobs) for the previous year.
+| 8 | √ | **Route "/api/v1.0/(start)"** - Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start without an end. "When given the start only, calculate TMIN, TAVG, and TMAX for **all dates greater than and equal to the start date**."
+| 9 | √ | **Route "/api/v1.0/(start)/(end)"** - "When given the start and the end date, calculate the TMIN, TAVG, and TMAX for dates between the start and end date **inclusive**."
 
 ### From the grading rubric pdf:
 #### Precipitation Analysis

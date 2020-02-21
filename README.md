@@ -46,46 +46,46 @@
 #### Precipitation Analysis
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 1 | | Gets the correct results for the last year of data (the last day in the dataset is 8/23/2017)
-| 2 | | Creates a pandas dataframe using the date and precipitation columns
-| 3 | | Sorts the dataframe by date
-| 4 | | Makes a plot using pandas with date as the x and precipitation as the y variables
+| 1 | √ | Gets the correct results for the last year of data (the last day in the dataset is 8/23/2017)
+| 2 | √ | Creates a pandas dataframe using the date and precipitation columns
+| 3 | √ | Sorts the dataframe by date
+| 4 | √ | Makes a plot using pandas with date as the x and precipitation as the y variables
 
 #### Station Analysis
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 01 | | Correctly outputs the number of stations in the dataset (9)
-| 02 | | Correctly finds the most active station by using count (USC00519281)
-| 03 | | Gets the min, max, and average temperatures for the most active station (USC00519281)
-| 04 | | Correctly plots a histogram for the last year of data using tobs as the column to count.
+| 01 | √ | Correctly outputs the number of stations in the dataset (9)
+| 02 | √ | Correctly finds the most active station by using count (USC00519281)
+| 03 | √ | Gets the min, max, and average temperatures for the most active station (USC00519281)
+| 04 | √ | Correctly plots a histogram for the last year of data using tobs as the column to count.
 
 #### API SQLite Connection & Landing Page 
 | Step | √ | Requirement |
 | :---: | :---: | :--- 
-| 01 | | Correctly generates the engine to the correct sqlite file 
-| 02 | | Uses automap_base() and reflects the database schema
-| 03 | | Correctly saves references to the tables in the sqlite file (measurement and station)
-| 04 | | Correctly creates and binds the session between the python app and database
+| 01 | √ | Correctly generates the engine to the correct sqlite file 
+| 02 | √ | Uses automap_base() and reflects the database schema
+| 03 | √ | Correctly saves references to the tables in the sqlite file (measurement and station)
+| 04 | √ | Correctly creates and binds the session between the python app and database
 
 #### API Static Routes
 ##### Precipitation route
-| 01 | | Returns the **jsonified** precipitation data for the last year in the database
-| 02 | | Returns json with the **date as the key** and the **value as the precipitation**
+| 01 | √ | Returns the **jsonified** precipitation data for the last year in the database
+| 02 | √ | Returns json with the **date as the key** and the **value as the precipitation**
 
 ##### Stations route
-| 01 | | Returns jsonified data of all of the stations in the database
+| 01 | √ | Returns jsonified data of all of the stations in the database
 
 ##### Tobs route
-| 01 | | Returns jsonified data for the most active station (USC00519281) for the last year of data
+| 01 | √ | Returns jsonified data for the most active station (USC00519281) for the last year of data
 
 #### API Dynamic Routes
 ##### Start Date only route
-| 01 | | Route accepts the start date as a parameter from the URL
-| 02 | | Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
+| 01 | √ | Route accepts the start date as a parameter from the URL
+| 02 | √ | Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
  
 ##### Start Date and End Date route
-| 01 | | Route accepts the start and end dates as parameters from the URL
-| 02 | | Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
+| 01 | √ | Route accepts the start and end dates as parameters from the URL
+| 02 | √ | Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
 
 #### Bonus
 ##### Trip Temperature Analysis

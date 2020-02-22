@@ -79,6 +79,7 @@
 | 01 | √ | Returns jsonified data for the most active station (USC00519281) for the last year of data
 
 #### API Dynamic Routes
+
 ##### Start Date only route
 | 01 | √ | Route accepts the start date as a parameter from the URL
 | 02 | √ | Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
@@ -88,11 +89,12 @@
 | 02 | √ | Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
 
 #### Bonus
+
 ##### Trip Temperature Analysis
 | 01 | √ | Uses the calc_temps function to get the min, max, and average temperatures for a date range of their choosing
-| 02 | | Uses the calculated temperatures to generate a bar chart with an error bar.
+| 02 | √ | Uses the calculated temperatures to generate a bar chart with an error bar.
 
 ##### Daily Rainfall Average
-| 01 | | Calculates the min, max, and average temperatures for each day of their trip and appends them to a list.
-| 02 | | Creates a dataframe from the list and generates a stacked line chart plotting the min, max, and average temps for each day of their trip
+| 01 | √ | Calculates the min, max, and average temperatures for each day of their trip and appends them to a list.
+| 02 | √ | Creates a dataframe from the list and generates a stacked line chart plotting the min, max, and average temps for each day of their trip
 

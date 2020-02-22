@@ -4,8 +4,8 @@
 | 1 | √ | Create a new repository for this project called `sqlalchemy-challenge`
 | 2 | √ | Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
 | 3 | √ | Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. 
-| 4 | | Analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
-| 5 | | Choose a start date and end date for your trip. Make sure that your vacation range is approximately **3-15 days total**
+| 4 | √ | Analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib.
+| 5 | √ | Choose a start date and end date for your trip. Make sure that your vacation range is approximately **3-15 days total**
 
 ### Hints
 1. You will need to join the station and measurement tables for some of the analysis queries.
@@ -69,32 +69,46 @@
 
 #### API Static Routes
 ##### Precipitation route
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Returns the **jsonified** precipitation data for the last year in the database
 | 02 | √ | Returns json with the **date as the key** and the **value as the precipitation**
 
 ##### Stations route
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Returns jsonified data of all of the stations in the database
 
 ##### Tobs route
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Returns jsonified data for the most active station (USC00519281) for the last year of data
 
 #### API Dynamic Routes
 
 ##### Start Date only route
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Route accepts the start date as a parameter from the URL
 | 02 | √ | Returns the min, max, and average temperatures calculated from the given start date to the end of the dataset
  
 ##### Start Date and End Date route
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Route accepts the start and end dates as parameters from the URL
 | 02 | √ | Returns the min, max, and average temperatures calculated from the given start date to the end date (inclusive)
 
 #### Bonus
 
 ##### Trip Temperature Analysis
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Uses the calc_temps function to get the min, max, and average temperatures for a date range of their choosing
 | 02 | √ | Uses the calculated temperatures to generate a bar chart with an error bar.
 
 ##### Daily Rainfall Average
+| Step | √ | Requirement |
+| :---: | :---: | :--- 
 | 01 | √ | Calculates the min, max, and average temperatures for each day of their trip and appends them to a list.
 | 02 | √ | Creates a dataframe from the list and generates a stacked line chart plotting the min, max, and average temps for each day of their trip
 
